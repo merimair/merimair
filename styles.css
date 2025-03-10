@@ -162,13 +162,29 @@ b.light-color{ color: #444; }
 	opacity: .3; background: linear-gradient(to right, #23074d, #cc5333); }
 
 #rounded-countdown {
-  max-width: 250px; /* Фіксований розмір */
   width: 100%;
-  margin: 0 auto;
+  max-width: 600px; /* Робить таймер компактнішим */
+  display: flex;
+  justify-content: space-between; /* Розподіляє кола по горизонталі */
+  align-items: center;
+  margin: 0 auto; /* Центрує */
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+.countdown {
+  flex: 1;
+  max-width: 100px; /* Робить кожне коло компактним */
+  transform: scale(0.8);
+}
+
+.countdown > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 
 
